@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CV - Dedi Riyanto</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: "Inter", sans-serif;
+      background: #f4f4f4;
+      color: #111;
+      padding: 40px 16px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 900px;
+      background: #fff;
+      border: 1px solid #ddd;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+      padding: 36px;
+    }
+
+    /* Header */
+    header {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 18px;
+      align-items: start;
+      padding-bottom: 18px;
+      border-bottom: 2px solid #111;
+      margin-bottom: 22px;
+    }
+
+    .name {
+      font-size: 30px;
+      font-weight: 700;
+      margin: 0;
+      letter-spacing: 0.3px;
+    }
+
+    .role {
+      margin: 6px 0 0;
+      font-size: 14px;
+      color: #333;
+      line-height: 1.5;
+    }
+
+    .contact {
+      font-size: 13px;
+      line-height: 1.7;
+      color: #111;
+      text-align: right;
+      white-space: nowrap;
+    }
+
+    .contact i {
+      width: 16px;
+      margin-right: 6px;
+    }
+
+    /* Section */
+    section {
+      margin-bottom: 18px;
+    }
+
+    .section-title {
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin: 0 0 10px;
+      padding-bottom: 6px;
+      border-bottom: 1px solid #ddd;
+      color: #111;
+    }
+
+    .summary {
+      font-size: 14px;
+      line-height: 1.7;
+      color: #222;
+      margin: 0;
+    }
+
+    /* Personal data */
+    .profile {
+      display: grid;
+      grid-template-columns: 140px 1fr;
+      gap: 16px;
+      align-items: start;
+      margin-top: 6px;
+    }
+
+    .photo {
+      width: 140px;
+      height: 180px;
+      border: 1px solid #ebebeb;
+      overflow: hidden;
+      background: #f0f0f0; /* Ubah dari #000000 ke warna abu-abu terang */
+      border-radius: 4px; /* Tambahan border radius untuk tampilan lebih modern */
+    }
+
+    .photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      /* Hapus filter grayscale agar foto berwarna */
+      /* filter: grayscale(100%); */
+    }
+
+    .info p {
+      margin: 6px 0;
+      font-size: 14px;
+      color: #222;
+    }
+
+    .info strong {
+      display: inline-block;
+      width: 80px;
+      color: #111;
+    }
+
+    /* Items */
+    .item {
+      margin-bottom: 12px;
+    }
+
+    .item-header {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      align-items: baseline;
+    }
+
+    .item-title {
+      margin: 0;
+      font-size: 15px;
+      font-weight: 700;
+      color: #111;
+    }
+
+    .item-date {
+      font-size: 13px;
+      color: #444;
+      font-weight: 500;
+      white-space: nowrap;
+    }
+
+    .item-desc {
+      margin: 6px 0 0;
+      font-size: 14px;
+      color: #222;
+      line-height: 1.6;
+    }
+
+    ul {
+      margin: 8px 0 0;
+      padding-left: 18px;
+      color: #222;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    /* Skills */
+    .skills {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 8px 16px;
+      font-size: 14px;
+      color: #222;
+    }
+
+    .skill {
+      padding: 6px 0;
+      border-bottom: 1px dotted #ccc;
+    }
+
+    footer {
+      margin-top: 22px;
+      padding-top: 14px;
+      border-top: 1px solid #ddd;
+      font-size: 12px;
+      color: #555;
+      text-align: center;
+    }
+
+    @media (max-width: 768px) {
+      header {
+        grid-template-columns: 1fr;
+      }
+
+      .contact {
+        text-align: left;
+        white-space: normal;
+      }
+
+      .profile {
+        grid-template-columns: 1fr;
+      }
+
+      .photo {
+        width: 100%;
+        height: 240px;
+      }
+
+      .skills {
+        grid-template-columns: 1fr;
+      }
+
+      .item-header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+
+    <header>
+      <div>
+        <h1 class="name">Dedi Riyanto</h1>
+        <p class="role">
+          Siswa SMK Rekayasa Perangkat Lunak (RPL) • Web Development • Database • Git/GitHub
+        </p>
+      </div>
+
+      <div class="contact">
+        <div><i class="fa-solid fa-phone"></i> +62 882 1615 8488</div>
+        <div><i class="fa-solid fa-envelope"></i> dedir0901@gmail.com</div>
+        <div><i class="fa-solid fa-location-dot"></i> Bantul, Yogyakarta</div>
+      </div>
+    </header>
+
+    <section>
+      <h2 class="section-title">Ringkasan</h2>
+      <p class="summary">
+        Siswa SMK jurusan Rekayasa Perangkat Lunak (RPL) dengan minat pada pengembangan web dan software.
+        Terbiasa membuat proyek web, menggunakan database, serta kolaborasi menggunakan Git dan GitHub.
+      </p>
+    </section>
+
+    <section>
+      <h2 class="section-title">Data Pribadi</h2>
+      <div class="profile">
+        <div class="photo">
+          <img src="Dedi.jpg" alt="Foto Profil">
+        </div>
+
+        <div class="info">
+          <p><strong>Nama</strong>: Dedi Riyanto</p>
+          <p><strong>TTL</strong>: Bantul, 13 Desember 2006</p>
+          <p><strong>Telepon</strong>: +62 882 1615 8488</p>
+          <p><strong>Email</strong>: dedir0901@gmail.com</p>
+          <p><strong>Alamat</strong>: Bantul, Yogyakarta</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="section-title">Pendidikan</h2>
+
+      <div class="item">
+        <div class="item-header">
+          <h3 class="item-title">SMK Negeri 1 Sanden — Rekayasa Perangkat Lunak (RPL)</h3>
+          <div class="item-date">2024 – 2027</div>
+        </div>
+        <p class="item-desc">Fokus pada pengembangan web, pemrograman, dan database.</p>
+      </div>
+
+      <div class="item">
+        <div class="item-header">
+          <h3 class="item-title">SMP Negeri 1 Bambanglipuro</h3>
+          <div class="item-date">2021 – 2024</div>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-header">
+          <h3 class="item-title">SD Muhammadiyah Derman</h3>
+          <div class="item-date">2012 – 2021</div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="section-title">Pengalaman / Proyek</h2>
+
+      <div class="item">
+        <div class="item-header">
+          <h3 class="item-title">Proyek Web Kasir</h3>
+          <div class="item-date">2024 – Sekarang</div>
+        </div>
+        <ul>
+          <li>Mengembangkan sistem kasir berbasis web menggunakan HTML, CSS, JavaScript, PHP, dan MySQL.</li>
+          <li>Membuat fitur transaksi, pengelolaan produk, dan laporan sederhana.</li>
+          <li>Mengelola struktur database serta proses CRUD.</li>
+        </ul>
+      </div>
+
+      <div class="item">
+        <div class="item-header">
+          <h3 class="item-title">Website Sederhana</h3>
+          <div class="item-date">2024</div>
+        </div>
+        <ul>
+          <li>Membuat website sederhana dengan tampilan responsif.</li>
+          <li>Menggunakan JavaScript untuk interaksi UI.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="section-title">Keahlian</h2>
+      <div class="skills">
+        <div class="skill">JavaScript</div>
+        <div class="skill">PHP</div>
+        <div class="skill">Python</div>
+        <div class="skill">React</div>
+        <div class="skill">Laravel</div>
+        <div class="skill">MySQL</div>
+        <div class="skill">PostgreSQL</div>
+        <div class="skill">Git & GitHub</div>
+      </div>
+    </section>
+
+    <footer>
+      © 2025 Dedi Riyanto
+    </footer>
+
+  </div>
+</body>
+</html>
